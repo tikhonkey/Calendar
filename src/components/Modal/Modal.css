@@ -1,0 +1,72 @@
+.Modal {
+    visibility: hidden;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.2);
+    transition: .2s all;
+    top: 0;
+}
+
+.Info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-40%) translateX(-50%);
+    padding: 35px;
+    z-index: 5;
+    background: #fff;
+    border-radius: .5em;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15), 0 5px 15px -7px rgba(0, 0, 0, .5);
+    min-height: 600px;
+    width: 600px;
+    overflow: hidden;
+
+    transition: .3s all;
+}
+
+.Close {
+    display: block;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    position: fixed;
+    top: 2vh;
+    right: 1.5vw;
+    transform: rotate(45deg);
+    transition: transform ease-out .1s;
+    z-index: 10;
+    border-radius: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.Close:hover {
+    transform: rotate(-45deg);
+}
+
+.CrossX {
+    display: block;
+    height: 2px;
+    background: #333;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+.CrossY {
+    display: block;
+    height: 100%;
+    width: 2px;
+    background: #333;
+    margin-left: 50%;
+    margin-top: -15px;
+    transform: translateX(-50%);
+}
+
+.ModalContent {
+
+}

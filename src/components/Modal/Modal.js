@@ -2,7 +2,7 @@ import React from 'react';
 
 import classes from './Modal.css';
 
-const modal = (  ) => {
+const modal = (props) => {
     return (
       <div className={classes.Modal}>
           <div className={classes.Info}>
@@ -10,7 +10,7 @@ const modal = (  ) => {
                   <span className={classes.CrossX}> </span>
                   <span className={classes.CrossY}> </span>
               </button>
-              <section className={classes.ModalContent}> </section>
+              <section className={classes.ModalContent}>{props}</section>
           </div>
       </div>
     );

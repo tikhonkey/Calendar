@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
+// import Auxy from './hoc/Auxy'
+import Calendar from './components/Calendar/Calendar';
+// import Modal from './components/Modal/Modal'
 
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <Calendar />
+        );
+    }
 }
 
 export default App;

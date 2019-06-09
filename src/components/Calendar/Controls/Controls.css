@@ -1,0 +1,65 @@
+header {
+    width: 1000px;
+    margin: 20px auto 5px;
+    display: flex;
+}
+
+.month, .year {
+    position: relative;
+}
+
+.month select, .year select {
+    background: #0563af;
+    color: #fff;
+    padding: 5px;
+    width: 410px;
+    border: none;
+    font-size: 26px;
+    box-shadow: 0 5px 10px -10px rgba(0,0,0,.8);
+    outline: 1px solid #E9E9E9;
+    cursor: pointer;
+    text-align: center;
+    line-height: 36px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.year select {
+    width: 130px;
+    background: #fff;
+    color: #888;
+    font-size: 30px;
+    line-height: 36px;
+    padding-right: 40px;
+    margin-left: 10px;
+}
+
+.month::before, .year::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 100%;
+
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='1.5em' height='1.5em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 1536 1536'%3e%3cg transform='translate(0 1536) scale(1 -1)'%3e%3cpath d='M1165 1011l102-102q19-19 19-45t-19-45L813 365q-19-19-45-19t-45 19L269 819q-19 19-19 45t19 45l102 102q19 19 45 19t45-19l307-307 307 307q19 19 45 19t45-19zm371-243q0 209-103 385.5T1153.5 1433 768 1536t-385.5-103T103 1153.5 0 768t103-385.5T382.5 103 768 0t385.5 103T1433 382.5 1536 768z' fill='%23efefef'/%3e%3c/g%3e%3c/svg%3e") center center no-repeat rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+.year::before {
+    width: 25%;
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='1.5em' height='1.5em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 1536 1536'%3e%3cg transform='translate(0 1536) scale(1 -1)'%3e%3cpath d='M1165 1011l102-102q19-19 19-45t-19-45L813 365q-19-19-45-19t-45 19L269 819q-19 19-19 45t19 45l102 102q19 19 45 19t45-19l307-307 307 307q19 19 45 19t45-19zm371-243q0 209-103 385.5T1153.5 1433 768 1536t-385.5-103T103 1153.5 0 768t103-385.5T382.5 103 768 0t385.5 103T1433 382.5 1536 768z' fill='%23fff'/%3e%3c/g%3e%3c/svg%3e") center center no-repeat rgba(0, 0, 0, 0.1);
+}
+
+.month:hover::before, .year:hover::before {
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='1.5em' height='1.5em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 1536 1536'%3e%3cg transform='translate(0 1536) scale(1 -1)'%3e%3cpath d='M1165 1011l102-102q19-19 19-45t-19-45L813 365q-19-19-45-19t-45 19L269 819q-19 19-19 45t19 45l102 102q19 19 45 19t45-19l307-307 307 307q19 19 45 19t45-19zm371-243q0 209-103 385.5T1153.5 1433 768 1536t-385.5-103T103 1153.5 0 768t103-385.5T382.5 103 768 0t385.5 103T1433 382.5 1536 768z' fill='%23fff'/%3e%3c/g%3e%3c/svg%3e") center center no-repeat #307DBC;
+}
+
+.year:hover::before {
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' focusable='false' width='1.5em' height='1.5em' style='-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);' preserveAspectRatio='xMidYMid meet' viewBox='0 0 1536 1536'%3e%3cg transform='translate(0 1536) scale(1 -1)'%3e%3cpath d='M1165 1011l102-102q19-19 19-45t-19-45L813 365q-19-19-45-19t-45 19L269 819q-19 19-19 45t19 45l102 102q19 19 45 19t45-19l307-307 307 307q19 19 45 19t45-19zm371-243q0 209-103 385.5T1153.5 1433 768 1536t-385.5-103T103 1153.5 0 768t103-385.5T382.5 103 768 0t385.5 103T1433 382.5 1536 768z' fill='%23fff'/%3e%3c/g%3e%3c/svg%3e") center center no-repeat rgba(0, 0, 0, 0.2);
+}
+
+.year:hover select {
+    color: #555;
+}

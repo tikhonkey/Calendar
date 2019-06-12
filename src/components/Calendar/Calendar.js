@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 import './Calendar.css'
 
 import Controls from './Controls/Controls'
 import Schedule from './Schedule/Schedule'
 
-class Calendar extends Component {
+const Calendar = () => {
 
-    render() {
+        const [getSettings, setSettings] = useState([0, 2018]);
 
         return (
             <React.Fragment>
 
-                <Controls />
+                <Controls getSettings={getSettings} setSettings={setSettings} />
 
                 <section className="week-days">
                     <div>Monday</div>
@@ -28,7 +28,6 @@ class Calendar extends Component {
 
             </React.Fragment>
         );
-    }
-}
+};
 
 export default Calendar;

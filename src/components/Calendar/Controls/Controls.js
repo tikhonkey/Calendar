@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 
 import './Controls.css'
 
-class Controls extends Component {
+const Controls = (props) => {
 
-    componentDidMount(){
-        let date = new Date();
-        document.forms['month'].elements[0][ date.getMonth() ].selected = true;
-        document.forms['year'].elements[0].options[ 'y' + date.getFullYear() ].selected = true;
-    }
+    useEffect( () => {
+            let date = new Date();
+            document.forms['month'].elements[0][ date.getMonth() ].selected = true;
+            document.forms['year'].elements[0].options[ 'y' + date.getFullYear() ].selected = true;
+    });
 
-    render() {
-        return (
-            <header>
+    return (
+        <header>
 
                 <form name="month" className="month">
                     <select>
@@ -39,9 +38,9 @@ class Controls extends Component {
                     </select>
                 </form>
 
+            <div>{props.getSettings}</div>
             </header>
         )
-    };
-}
+};
 
 export default Controls;

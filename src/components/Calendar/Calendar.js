@@ -6,7 +6,9 @@ import Controls from './Controls/Controls'
 import Schedule from './Schedule/Schedule'
 
 class Calendar extends Component {
+
     render() {
+
         return (
             <React.Fragment>
 

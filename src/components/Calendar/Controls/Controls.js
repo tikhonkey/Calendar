@@ -1,17 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { Component } from 'react';
 
 import './Controls.css'
 
-const Controls = (props) => {
+class Controls extends Component {
 
-    useEffect( () => {
+    componentDidMount()  {
             let date = new Date();
             document.forms['month'].elements[0][ date.getMonth() ].selected = true;
             document.forms['year'].elements[0].options[ 'y' + date.getFullYear() ].selected = true;
-    });
+    };
 
-    return (
-        <header>
+    render() {
+
+        const settings = this.props.getSettings;
+        console.log(settings[0]);
+
+        return (
+            <header>
 
                 <form name="month" className="month">
                     <select>
@@ -38,9 +43,9 @@ const Controls = (props) => {
                     </select>
                 </form>
 
-            <div>{props.getSettings}</div>
             </header>
         )
-};
+    }
+}
 
 export default Controls;

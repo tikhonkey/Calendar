@@ -7,7 +7,8 @@ import Schedule from './Schedule/Schedule'
 
 const Calendar = () => {
 
-        const [getSettings, setSettings] = useState([0, 2018]);
+        let date = new Date(),
+            [getSettings, setSettings] = useState([ date.getMonth(), date.getFullYear() ]);
 
         return (
             <React.Fragment>
@@ -24,7 +25,7 @@ const Calendar = () => {
                     <div>Sunday</div>
                 </section>
 
-                <Schedule />
+                <Schedule getSettings={getSettings}/>
 
             </React.Fragment>
         );

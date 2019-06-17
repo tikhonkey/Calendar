@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
-// import classes from './Schedule.css'
+import './Schedule.css'
 
 class Schedule extends Component {
     render() {
+
+        const settings = this.props.getSettings;
+
         return (
-            <div> Schedule </div>
+            <p> {settings[0]}, {settings[1]} </p>
         );
     }
 }

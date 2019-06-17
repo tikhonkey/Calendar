@@ -1,16 +1,21 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 import './Schedule.css'
 
-class Schedule extends Component {
-    render() {
+const Schedule = (props) => {
 
-        const settings = this.props.getSettings;
+    const settings = props.getSettings;
 
-        return (
-            <p> {settings[0]}, {settings[1]} </p>
-        );
-    }
-}
+    const today = props.date.getDate(),
+        days = new Date(settings[1], settings[0] + 1, 0).getDate(),
+        monthBegin = new Date(settings[1], settings[0], 1).getDay();
+
+    return (
+        <React.Fragment>
+            <p>today is {today}, {settings[0] + 1}, {settings[1]}</p>
+            <p> {days} days in month, {monthBegin} is month begin day</p>
+        </React.Fragment>
+    );
+
+};
 
 export default Schedule;

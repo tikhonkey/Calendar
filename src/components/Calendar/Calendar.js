@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import './Calendar.css'
 
 import Controls from './Controls/Controls'
@@ -7,28 +6,28 @@ import Schedule from './Schedule/Schedule'
 
 const Calendar = () => {
 
-        let date = new Date(),
-            [getSettings, setSettings] = useState([ date.getMonth(), date.getFullYear() ]);
+    let date = new Date(),
+        [getSettings, setSettings] = useState([date.getMonth(), date.getFullYear()]);
 
-        return (
-            <React.Fragment>
+    return (
+        <React.Fragment>
 
-                <Controls getSettings={getSettings} setSettings={setSettings} />
+            <Controls getSettings={getSettings} setSettings={setSettings}/>
 
-                <section className="week-days">
-                    <div>Monday</div>
-                    <div>Tuesday</div>
-                    <div>Wednesday</div>
-                    <div>Thursday</div>
-                    <div>Friday</div>
-                    <div>Saturday</div>
-                    <div>Sunday</div>
-                </section>
+            <section className="week-days">
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>
+                <div>Sunday</div>
+            </section>
 
-                <Schedule getSettings={getSettings}/>
+            <Schedule date={date} getSettings={getSettings}/>
 
-            </React.Fragment>
-        );
+        </React.Fragment>
+    );
 };
 
 export default Calendar;

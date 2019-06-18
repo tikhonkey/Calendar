@@ -1,0 +1,44 @@
+.empty_cell {
+    margin: 10px 10px 0 0;
+    width: 130px;
+    height: 130px;
+}
+
+.day{
+    padding: 10px;
+    margin: 10px 10px 0 0;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 5px 10px -10px rgba(0,0,0,.8);
+    outline: 1px solid #E9E9E9;
+    height: 110px;
+    width: 110px;
+    color: #999;
+    text-align: center;
+    transition: .2s all ease-in-out;
+}
+
+.current {
+    outline: 3px solid #F78C6C;
+}
+
+.day:hover{
+    box-shadow: 0 5px 15px -8px rgba(0,0,0,.9);
+}
+
+.number {
+    display: block;
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    left: -12px;
+    top: 0;
+    letter-spacing: -0.05em;
+    font-size: 120px;
+    line-height: 180px;
+    text-align: left;
+    color: #efefef;
+    cursor: pointer;
+    text-shadow: -1px -1px 0 #dedede, 1px -1px 0 #dedede, -1px 1px 0 #dedede, 1px 1px 0 #dedede;
+}

@@ -1,3 +1,18 @@
 p {
     text-align: center;
 }
+
+.calendar {
+    width: 1000px;
+    margin: 5px auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.tasks {
+    height: 150px;
+    width: 150px;
+}

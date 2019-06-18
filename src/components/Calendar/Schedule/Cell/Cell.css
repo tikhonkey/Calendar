@@ -41,4 +41,5 @@
     color: #efefef;
     cursor: pointer;
     text-shadow: -1px -1px 0 #dedede, 1px -1px 0 #dedede, -1px 1px 0 #dedede, 1px 1px 0 #dedede;
+    font-family: Arial, sans-serif;
 }

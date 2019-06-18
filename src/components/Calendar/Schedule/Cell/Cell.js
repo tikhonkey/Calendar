@@ -10,12 +10,16 @@ const Cell = (props) => {
             cell = <div className="empty_cell"> </div>;
             break;
         case ('day'):
-            cell = <div className="day">{props.index}</div>;
+            cell = (
+                <div className={props.current + 'day'}>
+                    <div className="number">
+                        {props.index}
+                    </div>
+                </div>);
             break;
         default:
             cell = null;
     }
-
     return cell;
 };
 

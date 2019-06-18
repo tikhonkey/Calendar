@@ -13,15 +13,21 @@ const Schedule = (props) => {
         isCurrentYear = settings[1] === new Date().getFullYear(),
         isCurrentMonth = settings[0] === new Date().getMonth();
 
-    console.log(isCurrentYear, isCurrentMonth, today, days, calendarStart);
-
-    let output = [];
+    const output = [];
 
     for (let i = 0; i < calendarStart + days; i ++ ) {
         if (i < calendarStart) {
-            output.push( <Cell type='empty-cell' key={i} /> );
+            output.push(
+                <Cell type='empty-cell' key={i} />
+            );
         } else {
-            output.push( <Cell type='day' key={i} index={i - calendarStart + 1} /> );
+            let current = '';
+            if ( i + 1 === today + calendarStart && isCurrentMonth && isCurrentYear){
+                current = 'current ';
+            }
+            output.push(
+                <Cell type='day' current={current} index={i - calendarStart + 1} key={i} />
+            );
         }
     }
 
